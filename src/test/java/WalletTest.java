@@ -62,7 +62,7 @@ public class WalletTest {
         wallet.addMoney(10000);
         wallet.addMoney(5000);
         wallet.addCoin(100);
-        assertEquals(15000, wallet.getMoneyAvailable());
+        assertEquals(15100, wallet.getMoneyAvailable());
     }
 
     @Test
@@ -82,8 +82,8 @@ public class WalletTest {
         wallet.addMoney(20000);
         wallet.addCoin(500);
         wallet.addCoin(100);
-        assertEquals(20500, wallet.getMoneyAvailable()); // Total should be 20500 (20000 + 500 + 100)
-        assertEquals(1500, wallet.calculateCoins());
+        assertEquals(20600, wallet.getMoneyAvailable()); // Total should be 20500 (20000 + 500 + 100)
+        assertEquals(600, wallet.calculateCoins());
         assertEquals(20000, wallet.calculateMoneys());
     }
 }
